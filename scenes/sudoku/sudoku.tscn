@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://c36mjbqxva45"]
+
+[ext_resource type="Script" path="res://scenes/sudoku/sudoku.gd" id="1_18vp4"]
+
+[node name="Sudoku" type="Node2D"]
+script = ExtResource("1_18vp4")
+
+[node name="DrawTimer" type="Timer" parent="."]

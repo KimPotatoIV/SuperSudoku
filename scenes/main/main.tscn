@@ -1,0 +1,13 @@
+[gd_scene load_steps=4 format=3 uid="uid://cw7ptdufmh1u0"]
+
+[ext_resource type="PackedScene" uid="uid://c36mjbqxva45" path="res://scenes/sudoku/sudoku.tscn" id="1_m5ihx"]
+[ext_resource type="PackedScene" uid="uid://cdhup5856uh8o" path="res://scenes/background/background.tscn" id="1_xxyxk"]
+[ext_resource type="PackedScene" uid="uid://c5yth81egy2hj" path="res://scenes/hud/hud.tscn" id="3_ecbtv"]
+
+[node name="Main" type="Node2D"]
+
+[node name="Background" parent="." instance=ExtResource("1_xxyxk")]
+
+[node name="Sudoku" parent="." instance=ExtResource("1_m5ihx")]
+
+[node name="HUD" parent="." instance=ExtResource("3_ecbtv")]
