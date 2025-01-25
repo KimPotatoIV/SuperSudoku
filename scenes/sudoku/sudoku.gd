@@ -44,6 +44,9 @@ var draw_timer: Timer
 var drawing: bool = false
 # 스도쿠를 그리는 중인지 여부
 
+var generate_audio_player
+# 스도쿠 연산 중 재생 오디오
+
 ##################################################
 func _ready() -> void:	
 	init_sudoku()
@@ -54,6 +57,9 @@ func _ready() -> void:
 	draw_timer.one_shot = true
 	draw_timer.connect("timeout", Callable(self, "_on_draw_timer_timeout"))
 	# draw_timer 초기화
+	
+	generate_audio_player = $GenerateAudioPlayer
+	# generate_audio_player 초기화
 
 ##################################################
 func _process(delta: float) -> void:
@@ -142,6 +148,9 @@ func generate_sudoku() -> void:
 		# 현재 인덱스 record_array도 초기화
 		index -= 1
 		# 이전 셀 연산을 위한 설정
+	
+	generate_audio_player.play()
+	# 연산 효과음 재생
 
 ##################################################
 func get_possible_numbers(idx: int) -> Array:
