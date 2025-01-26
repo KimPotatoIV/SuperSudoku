@@ -92,7 +92,7 @@ func init_sudoku() -> void:
 			array.append(i * SUDOKU_WIDTH_SIZE + j)
 		row_array.append(array)
 	# row_array 초기화 설정
-	# [1,2,3,4,5,6,7,8,9] ... [72,73,74,75,76,77,78,79,80]
+	# [0,1,2,3,4,5,6,7,8] ... [72,73,74,75,76,77,78,79,80]
 	
 	for i in range(SUDOKU_WIDTH_SIZE):
 		var array = []
